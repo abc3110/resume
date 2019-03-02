@@ -13,16 +13,17 @@ CREATE TABLE dota_product(
 	subtitle VARCHAR(128),
 	price DECIMAL(7,2),
 	imgUrl VARCHAR(100),
-	attention INT			
+	attention INT,
+	stars INT
 );
 #添加数据
-INSERT INTO dota_product VALUES(null,"DOTA2-扭蛋手办II","快来加入我们的篝火晚会吧！ （随机开出7款中的1款）",69.00,"http://127.0.0.1:3000/img/product01.jpg",21);
-INSERT INTO dota_product VALUES(null,"DOTA2-扭蛋手办I","在小娜迦的歌声里睡着啦！超萌扭蛋手办共计11款，盲盒设计附带游戏内虚拟 - 专属聊天表情包。（随机开出11款中的1款）",89.00,"http://127.0.0.1:3000/img/product02.jpg",25);
-INSERT INTO dota_product VALUES(null,"DOTA2-痛苦女王 粘土人手办","GOODSMILE制作，可摆多种超萌姿势，内含Ti7纯正宝瓶和多种配件",298.00,"http://127.0.0.1:3000/img/product01.jpg",15);
-INSERT INTO dota_product VALUES(null,"DOTA2-莉娜Figam手办II","GOODSMILE制作，内含Ti7纯正宝瓶和多种配件，以及额外的至宝款式",69.00,"http://127.0.0.1:3000/img/product01.jpg",21);
-INSERT INTO dota_product VALUES(null,"DOTA2 - 敌法师 Figma手办","GOODSMILE制作，内含Ti6纯正宝瓶和多种配件，并有一定几率开出纯金珍藏",69.00,"http://127.0.0.1:3000/img/product01.jpg",21);
-INSERT INTO dota_product VALUES(null,"DOTA2-扭蛋手办II","快来加入我们的篝火晚会吧！ （随机开出7款中的1款）",69.00,"http://127.0.0.1:3000/img/product01.jpg",21);
-INSERT INTO dota_product VALUES(null,"DOTA2-扭蛋手办II","快来加入我们的篝火晚会吧！ （随机开出7款中的1款）",69.00,"http://127.0.0.1:3000/img/product01.jpg",21);
+INSERT INTO dota_product VALUES(null,"DOTA2-扭蛋手办II","快来加入我们的篝火晚会吧！ （随机开出7款中的1款）",69.00,"http://127.0.0.1:3000/img/product01.jpg",21,4);
+INSERT INTO dota_product VALUES(null,"DOTA2-扭蛋手办I","在小娜迦的歌声里睡着啦！超萌扭蛋手办共计11款，盲盒设计附带游戏内虚拟 - 专属聊天表情包。（随机开出11款中的1款）",89.00,"http://127.0.0.1:3000/img/product02.jpg",25,3);
+INSERT INTO dota_product VALUES(null,"DOTA2-痛苦女王 粘土人手办","GOODSMILE制作，可摆多种超萌姿势，内含Ti7纯正宝瓶和多种配件",298.00,"http://127.0.0.1:3000/img/product01.jpg",15,4);
+INSERT INTO dota_product VALUES(null,"DOTA2-莉娜Figam手办II","GOODSMILE制作，内含Ti7纯正宝瓶和多种配件，以及额外的至宝款式",69.00,"http://127.0.0.1:3000/img/product01.jpg",21,5);
+INSERT INTO dota_product VALUES(null,"DOTA2 - 敌法师 Figma手办","GOODSMILE制作，内含Ti6纯正宝瓶和多种配件，并有一定几率开出纯金珍藏",69.00,"http://127.0.0.1:3000/img/product01.jpg",21,4);
+INSERT INTO dota_product VALUES(null,"DOTA2-扭蛋手办II","快来加入我们的篝火晚会吧！ （随机开出7款中的1款）",69.00,"http://127.0.0.1:3000/img/product01.jpg",21,2);
+INSERT INTO dota_product VALUES(null,"DOTA2-扭蛋手办II","快来加入我们的篝火晚会吧！ （随机开出7款中的1款）",69.00,"http://127.0.0.1:3000/img/product01.jpg",21,0);
 #商品图片表：dota_product_pic
 CREATE TABLE dota_product_pic(
 	pid INT PRIMARY KEY AUTO_INCREMENT,
@@ -36,6 +37,22 @@ INSERT INTO dota_product_pic VALUES(null,1,"http://127.0.0.1:3000/img/game/sm01.
 INSERT INTO dota_product_pic VALUES(null,1,"http://127.0.0.1:3000/img/game/sm02.jpg","http://127.0.0.1:3000/img/game/bg02.jpg","http://127.0.0.1:3000/img/game/intro02.jpg");
 INSERT INTO dota_product_pic VALUES(null,1,"http://127.0.0.1:3000/img/game/sm03.jpg","http://127.0.0.1:3000/img/game/bg03.jpg","http://127.0.0.1:3000/img/game/intro03.jpg");
 INSERT INTO dota_product_pic VALUES(null,1,"http://127.0.0.1:3000/img/game/sm04.jpg","http://127.0.0.1:3000/img/game/bg04.jpg",null);
+INSERT INTO dota_product_pic VALUES(null,2,"http://127.0.0.1:3000/img/game/nj_sm01.jpg","http://127.0.0.1:3000/img/game/nj_bg01.jpg","http://127.0.0.1:3000/img/game/nj_intro01.jpg");
+INSERT INTO dota_product_pic VALUES(null,2,"http://127.0.0.1:3000/img/game/nj_sm02.jpg","http://127.0.0.1:3000/img/game/nj_bg02.jpg",null);
+INSERT INTO dota_product_pic VALUES(null,2,"http://127.0.0.1:3000/img/game/nj_sm03.jpg","http://127.0.0.1:3000/img/game/nj_bg03.jpg",null);
+INSERT INTO dota_product_pic VALUES(null,2,"http://127.0.0.1:3000/img/game/nj_sm04.jpg","http://127.0.0.1:3000/img/game/nj_bg04.jpg",null);
+INSERT INTO dota_product_pic VALUES(null,3,"http://127.0.0.1:3000/img/game/tk_sm01.jpg","http://127.0.0.1:3000/img/game/tk_bg01.jpg","http://127.0.0.1:3000/img/game/tk_intro01.jpg");
+INSERT INTO dota_product_pic VALUES(null,3,"http://127.0.0.1:3000/img/game/tk_sm02.jpg","http://127.0.0.1:3000/img/game/tk_bg02.jpg",null);
+INSERT INTO dota_product_pic VALUES(null,3,"http://127.0.0.1:3000/img/game/tk_sm03.jpg","http://127.0.0.1:3000/img/game/tk_bg03.jpg",null);
+INSERT INTO dota_product_pic VALUES(null,3,"http://127.0.0.1:3000/img/game/tk_sm04.jpg","http://127.0.0.1:3000/img/game/tk_bg04.jpg",null);
+INSERT INTO dota_product_pic VALUES(null,4,"http://127.0.0.1:3000/img/game/ln_sm01.jpg","http://127.0.0.1:3000/img/game/ln_bg01.jpg","http://127.0.0.1:3000/img/game/tk_intro01.jpg");
+INSERT INTO dota_product_pic VALUES(null,4,"http://127.0.0.1:3000/img/game/ln_sm02.jpg","http://127.0.0.1:3000/img/game/ln_bg02.jpg",null);
+INSERT INTO dota_product_pic VALUES(null,4,"http://127.0.0.1:3000/img/game/ln_sm03.jpg","http://127.0.0.1:3000/img/game/ln_bg03.jpg",null);
+INSERT INTO dota_product_pic VALUES(null,4,"http://127.0.0.1:3000/img/game/ln_sm04.jpg","http://127.0.0.1:3000/img/game/ln_bg04.jpg",null);
+INSERT INTO dota_product_pic VALUES(null,5,"http://127.0.0.1:3000/img/game/df_sm01.jpg","http://127.0.0.1:3000/img/game/df_bg01.jpg","http://127.0.0.1:3000/img/game/df_intro01.jpg");
+INSERT INTO dota_product_pic VALUES(null,5,"http://127.0.0.1:3000/img/game/df_sm02.jpg","http://127.0.0.1:3000/img/game/df_bg02.jpg","http://127.0.0.1:3000/img/game/df_intro01.jpg");
+INSERT INTO dota_product_pic VALUES(null,5,"http://127.0.0.1:3000/img/game/df_sm03.jpg","http://127.0.0.1:3000/img/game/df_bg03.jpg","http://127.0.0.1:3000/img/game/df_intro01.jpg");
+INSERT INTO dota_product_pic VALUES(null,5,null,null,"http://127.0.0.1:3000/img/game/df_intro01.jpg");
 #商品种类：dota_product_category
 CREATE TABLE dota_product_category(
 	cid INT PRIMARY KEY AUTO_INCREMENT,

@@ -16,7 +16,7 @@ router.get("/list",(req,res)=>{
 //获取商品信息：/product/detail
 router.get("/detail",(req,res)=>{
 	var id=req.query.id;
-	var sql="select * from dota_product where id=?"
+	var sql="select * from dota_product where id=?";
 	pool.query(sql,[id],(err,result)=>{
 		if(err) throw err;
 		console.log(result);
@@ -25,4 +25,14 @@ router.get("/detail",(req,res)=>{
 		}
 	})
 });
+//获取商品图片：
+router.get("/pic",(req,res)=>{
+	var id=req.query.id;
+	var sql="select * from dota_product_pic where product_id=?";
+	pool.query(sql,[id],(err,result)=>{
+		if(err) throw err;
+		console.log(result);
+		res.send({code:1,data:result});
+	})
+})
 module.exports=router;
